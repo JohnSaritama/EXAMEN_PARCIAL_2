@@ -1,0 +1,127 @@
+
+1.
+
+Como Ingeniero en computación quiero simular un torneo de eliminación directa en Java Maven entre 16 jugadores cada partido se juega al mejor de 3 sets (gana quien primero gana 2 sets)El ganador de cada partido avanza a la siguiente ronda Las rondas se juegan en simultaneo, la siguiente ronda inicia solo cuando todos los partidos de la ronda actual han terminado. Las reglas son:
+
+Cada partido se juega un máximo de 3 sets (el primero que gana 2 sets gana el partido).
+
+El torneo tiene rondas: octavos de final, cuartos de final, semifinales y final.
+
+Cada set debe durar entre 1.5 y 2 segundos es decir usando simulación con Thread.sleep
+
+Los partidos de una misma ronda deben jugarse en paralelo usando ExecutorService, también para demás cosas puedes usar Callable y future.
+
+2.
+Quiero que la salida del programa tenga este formato claro por ronda, igual que un organizador de torneos:
+
+===== OCTAVOS DE FINAL =====
+Jugador 1 vs Jugador 16
+Set 1: Jugador 16
+Set 2: Jugador 1
+Set 3: Jugador 1
+Ganador del partido: Jugador 1
+
+Jugador 2 vs Jugador 15
+Set 1: Jugador 2
+Set 2: Jugador 2
+Ganador del partido: Jugador 2
+
+Jugador 3 vs Jugador 14
+Set 1: Jugador 3
+Set 2: Jugador 14
+Set 3: Jugador 14
+Ganador del partido: Jugador 14
+
+Jugador 4 vs Jugador 13
+Set 1: Jugador 4
+Set 2: Jugador 13
+Set 3: Jugador 4
+Ganador del partido: Jugador 4
+
+Jugador 5 vs Jugador 12
+Set 1: Jugador 12
+Set 2: Jugador 12
+Ganador del partido: Jugador 12
+
+Jugador 6 vs Jugador 11
+Set 1: Jugador 11
+Set 2: Jugador 6
+Set 3: Jugador 6
+Ganador del partido: Jugador 6
+
+Jugador 7 vs Jugador 10
+Set 1: Jugador 10
+Set 2: Jugador 7
+Set 3: Jugador 10
+Ganador del partido: Jugador 10
+
+Jugador 8 vs Jugador 9
+Set 1: Jugador 8
+Set 2: Jugador 8
+Ganador del partido: Jugador 8
+
+===== CUARTOS DE FINAL =====
+Jugador 1 vs Jugador 2
+Set 1: Jugador 1
+Set 2: Jugador 1
+Ganador del partido: Jugador 1
+
+Jugador 14 vs Jugador 4
+Set 1: Jugador 14
+Set 2: Jugador 4
+Set 3: Jugador 14
+Ganador del partido: Jugador 14
+
+Jugador 12 vs Jugador 6
+Set 1: Jugador 6
+Set 2: Jugador 6
+Ganador del partido: Jugador 6
+
+Jugador 10 vs Jugador 8
+Set 1: Jugador 8
+Set 2: Jugador 10
+Set 3: Jugador 10
+Ganador del partido: Jugador 10
+
+===== SEMIFINAL =====
+Jugador 1 vs Jugador 14
+Set 1: Jugador 14
+Set 2: Jugador 1
+Set 3: Jugador 1
+Ganador del partido: Jugador 1
+
+Jugador 6 vs Jugador 10
+Set 1: Jugador 10
+Set 2: Jugador 6
+Set 3: Jugador 6
+Ganador del partido: Jugador 6
+
+===== FINAL =====
+Jugador 1 vs Jugador 6
+Set 1: Jugador 6
+Set 2: Jugador 6
+Ganador del partido: Jugador 6
+
+🏆 ¡Campeón del torneo: Jugador 6!
+
+
+3.
+En octavos de final, quiero que el emparejamiento siga esta lógica:
+
+Jugador 1 vs Jugador 16
+
+Jugador 2 vs Jugador 15
+
+Jugador 3 vs Jugador 14
+
+... hasta Jugador 8 vs Jugador 9.
+
+Asegúrate de que esto se respete en el código.
+
+
+
+4
+Estas usando ExecutorService  para ejecutar todos los partidos de una ronda en paralelo?. Espera a que terminen antes de continuar con la siguiente ronda.
+
+5
+Muéstrame el código Java completo que haga todo eso. Quiero ejecutar el torneo completo con todo
